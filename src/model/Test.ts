@@ -1,4 +1,4 @@
 export class Test {
-    name: string;
-    surname: string;
+    name?: string;
+    surname?: string;
 }
