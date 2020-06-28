@@ -1,4 +1,5 @@
 import express from 'express';
+import '@controller/TestController';
 
 const app = express();
 
