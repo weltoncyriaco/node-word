@@ -1,7 +1,7 @@
-import { Test } from "@model/Test";
+import { Test } from '@model/Test'
 
 export class TestController {
-    test() {
-        const user = new Test();
-    }
+  test () {
+    const user = new Test()
+  }
 }
