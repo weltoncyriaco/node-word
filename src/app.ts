@@ -1,6 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 import bodyparser from 'body-parser'
+import 'reflect-metadata'
+import { createConnection } from 'typeorm'
 
 import routes from './routers/routes'
 
@@ -22,7 +24,11 @@ class App {
     }
 
     private database (): void {
-      // const db = database.instance
+      createConnection().then(connection => {
+        return connection.runMigrations({ transaction: 'all' })
+      }).catch(error => {
+        console.error('Database connection error', error)
+      })
     }
 
     private routers (): void {
