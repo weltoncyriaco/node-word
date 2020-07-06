@@ -16,5 +16,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-unused-vars": ["error", { "varsIgnorePattern": "Repository|Response|Request|MigrationInterface|QueryRunner"}],
+        "no-param-reassign": 2
     }
 }

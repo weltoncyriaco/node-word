@@ -7,15 +7,15 @@ export class Test {
     @PrimaryGeneratedColumn({
       name: 'id'
     })
-    id?: number;
+    id!: number;
 
     @Column({
       name: 'name'
     })
-    name?: string;
+    name!: string;
 
     @Column({
       name: 'surname'
     })
-    surname?: string;
+    surname!: string;
 }

@@ -8,7 +8,10 @@ class TestController {
   }
 
   public async get (req: Request, res: Response): Promise<Response> {
-    const result = await TestService.hello()
+    const photo = new Test()
+    photo.name = 'Me and Bears'
+    photo.surname = 'I am near polar bears'
+    const result = await TestService.hello(photo)
     return res.send(result)
   }
 
